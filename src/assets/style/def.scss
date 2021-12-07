@@ -1,0 +1,114 @@
+@import "./variables";
+
+@font-face {
+    font-family: $title_name_font;
+    font-weight: 600;
+    src: url("#{$route_font}Poppins-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: $regular_name_font;
+    font-weight: 400;
+    src: url("#{$route_font}Roboto-Regular.ttf");
+}
+@font-face {
+    font-family: $medium_name_font;
+    font-weight: 500;
+    src: url("#{$route_font}Roboto-Medium.ttf");
+    //reemplaza el src: url("/assets/fonts/Roboto-Medium.ttf");
+    //por un src: url("#{$route_font}Roboto-Medium.ttf");  , donde el $route_fomt , tiene la ruta de la fuente.
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: $medium_name_font;
+    letter-spacing: 0.22px;
+}
+a {
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+::selection {
+    background-color: $color_primary;
+    color: #ffffff;
+}
+
+button {
+    cursor: pointer;
+    &:active {
+        border-style: none;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+h1,
+h2,
+h2 span {
+    font-family: $title_name_font;
+    font-weight: 600;
+    line-height: 1.2em;
+    letter-spacing: 0.67px;
+}
+h1 {
+    letter-spacing: 0.67px;
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 39px;
+}
+h3,
+h3 span {
+    font-family: $medium_name_font;
+    font-size: 39px;
+    font-weight: 500;
+}
+
+nav,
+.text2-s1,
+.text1-s3 {
+    font-family: $medium_name_font;
+}
+
+@media screen and (max-height: 568px) and (max-width: 376px) {
+    h1 {
+        font-size: 38px !important;
+    }
+    .section1 .content-s1 {
+        .container-s1 {
+            margin-top: 90px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 42px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+    h3,
+    h3 span {
+        font-family: $medium_name_font;
+        font-size: 32px;
+        font-weight: 500;
+    }
+}
